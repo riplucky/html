@@ -1,0 +1,80 @@
+*{
+	margin: 0px;
+	padding:  0px;
+}
+ul{
+	list-style-type: none;
+}
+section{
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+.font-20{
+	font-size: 20px;
+}
+.font-30{
+	font-size: 30px;
+}
+.sidenav {
+  height: 100vh;
+  width: 0vw; 
+  background-color: #111;
+  display: none;
+  justify-content: space-around;
+  color: #fff;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+.close-button{
+	display: flex;
+	width: 20%;
+	margin-top: 20px;
+	justify-content: flex-end;
+}
+#main-menu{
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	margin-top: 20px;
+}
+#main-menu li{
+	display: flex;
+	margin-bottom: 20px;
+}
+#main-menu li a{
+	font-size: 20px;
+	color: #fff;
+	text-decoration: none;
+	display: flex;
+	width: max-content;
+	position: relative;
+}
+#main-menu li a:after{
+	content: "";
+	display: flex;
+	background-color: #fff;
+	position: absolute;
+	width: 0px;
+	height: 2px;
+	bottom: 0px;
+	left: 50%;
+	z-index: 2;
+	transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+#main-menu li a:hover:after{
+	left: 0px;
+	width: 100%;
+}
+#main-content{
+	display: flex;
+	justify-content: flex-start;
+	flex-direction:column ;
+	margin-top: 20px;
+	margin-left: 10px;
+}
+.icon{
+	cursor:pointer
+}

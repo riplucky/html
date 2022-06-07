@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/icofont.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<title>Menu Off-Canvas</title>
+</head>
+<body>
+<section>
+	<div id="mySidenav" class="sidenav">
+		<ul id="main-menu">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Products</a></li>
+			<li><a href="#">Construction</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+		<div class="close-button"><i class="icofont-ui-close icon font-20" id="close"></i></div>
+	</div>
+	<div id="main-content">
+		<i class="icofont-navigation-menu icon font-30" id="open"> Menu</i> 
+	</div>
+</section>
+</body>
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#open").click(function(e) {
+			var withMenu = $("#mySidenav").width();
+			$("#mySidenav").show();
+			$("#mySidenav").css({"display":"flex"});
+			$("#mySidenav").animate({
+				width:'100%'
+			},500);
+		})
+		$("#close").click(function(e){
+			$("#mySidenav").animate({
+				width:'0%'
+			},500);
+			$("#mySidenav").hide(500);
+		})
+	})
+</script>
+</html>
