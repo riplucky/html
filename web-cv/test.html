@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truong Chi Nghiem</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Saira+Condensed:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=DM+Serif+Display&family=Saira+Condensed:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="Stylesheet" href="css/bootstrap-reboot.min.css"/>
+    <link rel="Stylesheet" href="css/bootstrap.css"/>
+    <link rel="Stylesheet" type="text/css" href="css/icofont.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="Stylesheet" href="css/animate.css"/>
+    <link rel="Stylesheet" href="css/style.css"/>
+</head>
+<body >
+    gsdgsgsgd
+    <header class="background1 width-100">
+        <div class="padding4">
+            <div class="d-flex1 justify-content-center align-items-center padding1">
+                <div class="width-70 justify-content-between align-items-center d-flex margin1">
+                    <div class="d-flex">
+                        <div class="align-items-center">
+                            <h1 class=""><a class="off1 color4 my-element">CHINGHIEM</a></h1>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div>
+        <div>
+            <p class="height-190px"></p>
+        </div>
+    </header>
+    
+
+
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+
+</script>
+<script>
+    const element = document.querySelector('.my-element');
+    element.classList.add('wow lightSpeedInRight','fadeOutRightBig')
+
+    const animateCSS = (element, animation, prefix = 'animate__') =>
+  // We create a Promise and return it
+  new Promise((resolve, reject) => {
+    const animationName = `${prefix}${animation}`;
+    const node = document.querySelector(element);
+
+    node.classList.add(`${prefix}animated`, animationName);
+
+    // When the animation ends, we clean the classes and resolve the Promise
+    function handleAnimationEnd(event) {
+      event.stopPropagation();
+      node.classList.remove(`${prefix}animated`, animationName);
+      resolve('Animation ended');
+    }
+
+    node.addEventListener('animationend', handleAnimationEnd, {once: true});
+  });
+</script>
+</html>
