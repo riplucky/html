@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Slide chuyen canh Javascript </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+
+    <section>
+        <div class="slide-box">
+            <div class="img-box">
+                <img class="img" src="img/patrick-fore.jpg">
+                <img class="img" src="img/sean-musil.jpg">
+                <img class="img" src="img/wasa-crispbread.jpg">
+                <img class="img" src="img/sean-musil.jpg">
+                <img class="img" src="img/wasa-crispbread.jpg">
+            </div>
+
+            <form class="button-box">
+                <div class="button" type="radio" name="switch" onclick="select(0)"></div>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        
+        var index=0;
+        var slides = document.querySelector(".img-box");
+        var imgs = document.querySelectorAll(".img");
+        var buttons = document.querySelectorAll(".button");
+
+
+        function addButton(){
+            for (var i=1; i <= imgs.length-1; i++){
+                document.querySelector(".button-box").innerHTML += 
+                "<div class='button' type='radio' name='switch' onclick='select(" + i + ")'></div>";
+            }
+        }
+
+        addButton();
+
+        function show(){
+            var position = -600 * index + "px";
+            console.log(position);
+            var translateValue = 'transform: translate(' + position + ');'
+            console.log(translateValue);
+            // console.log(translateValue);
+
+            // slides.setAttribute("style",translateValue);
+            slides.style.transform = 'translate(' + position + ')';
+            index++;
+            if(index == imgs.length){
+                    index = 0;
+                }
+            // setTimeout(show, 2000);
+        }
+
+        show();
+        var interval = setInterval(show, 3000);
+
+        function select(i){   
+            clearInterval(interval);         
+            index = i
+            show();
+            interval = setInterval(show, 3000);
+        }
+
+
+    </script>
+
+</body>
+</html>
